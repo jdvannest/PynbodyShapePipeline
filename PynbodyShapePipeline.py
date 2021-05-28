@@ -42,7 +42,7 @@ else:
 if args.simulation=='RomC':
     #Set variables for RomC
     #Path to simulation file
-    simpath=f"/nobackupp2/mtremmel/Romulus/h1.cosmo50/h1.cosmo50PLK.1536gst1bwK1BH.{args.timestep}"
+    simpath=f"/myhome2/users/munshi/Romulus/h1.cosmo50/h1.cosmo50PLK.1536gst1bwK1BH.{args.timestep}"
     #load in z0 IDs for dwarf halos
     with open('/myhome2/users/vannest/pfe_backup/nobackupp2/UDG/RomCHalos.txt') as f:
         halolist = f.readlines()
@@ -59,7 +59,7 @@ if args.simulation=='RomC':
     fname = f'/myhome2/users/vannest/PynbodyShapeHistory.RomC.{args.filter}.nshells{args.number}.pickle'
 else:
     #Set variables for Rom25
-    simpath= f"/nobackupp2/mtremmel/Romulus/cosmo25/cosmo25p.768sg1bwK1BHe75.{args.timestep}"
+    simpath= f"/myhome2/users/munshi/Romulus/cosmo25/cosmo25p.768sg1bwK1BHe75.{args.timestep}"
     with open('/myhome2/users/vannest/pfe_backup/nobackupp2/UDG/Rom25Halos.txt') as f:
         halolist = f.readlines()
     halolist = [int(i) for i in halolist]
