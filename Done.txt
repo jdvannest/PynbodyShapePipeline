@@ -1,7 +1,0 @@
-Analysis of Rom25 finished at Thu, May 27 at 16:01:57
-Total Run Time: 0:00:23.105343
-
-Analysis of Rom25 started at Thu, May 27 at 16:01:34
-Timestep 008192 Finished. Run Time: 0:00:07.225876
-Timestep 007990 Finished. Run Time: 0:00:02.432608
-Timestep 007000 Finished. Run Time: 0:00:10.774468
