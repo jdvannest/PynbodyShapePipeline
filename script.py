@@ -7,10 +7,7 @@ for sim in sims:
     f = open(f'Pipeline_{sim}','w')
     f.writelines('#!/bin/bash\n')
     f.writelines(f'python DoneMessage.py -t start -s {sim}\n')
-    with open(f'/nobackup/jvannest/UDG/Timesteps.{sim}.txt') as ts:
-        times = ts.readlines()
-    times = [t.rstrip('\n') for t in times]
-    times.reverse()
+    times = ['008192']
     first = True
     for time in times:
         if first:

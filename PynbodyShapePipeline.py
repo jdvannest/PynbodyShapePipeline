@@ -44,31 +44,31 @@ if args.simulation=='RomC':
     #Path to simulation file
     simpath=f"/nobackupp2/mtremmel/Romulus/h1.cosmo50/h1.cosmo50PLK.1536gst1bwK1BH.{args.timestep}"
     #load in z0 IDs for dwarf halos
-    with open('/nobackup/jvannest/UDG/RomCHalos.txt') as f:
+    with open('/myhome2/users/vannest/pfe_backup/nobackupp2/UDG/RomCHalos.txt') as f:
         halolist = f.readlines()
     halolist = [int(i) for i in halolist]
     #Load in timestep numbers
-    with open('/nobackup/jvannest/UDG/Timesteps.RomC.txt') as f:
+    with open('/myhome2/users/vannest/PynbodyShapePipeline/Timesteps.RomC.txt') as f:
         timesteps = f.readlines()
     timesteps = [t.rstrip('\n') for t in timesteps]
     #Arange with z0 as first entry to follow the tangos .calculate_for_progenitors format
     timesteps.reverse()
     #Load in IDs of major progenitors at each timestep
-    HaloIDs = pickle.load(open(f'/nobackup/jvannest/UDG/HaloIDs.RomC.pickle','rb'))
+    HaloIDs = pickle.load(open(f'/myhome2/users/vannest/PynbodyShapePipeline/HaloIDs.RomC.pickle','rb'))
     #Path to output data file
-    fname = f'/nobackup/jvannest/UDG/PynbodyShapeHistory.RomC.{args.filter}.nshells{args.number}.pickle'
+    fname = f'/myhome2/users/vannest/PynbodyShapeHistory.RomC.{args.filter}.nshells{args.number}.pickle'
 else:
     #Set variables for Rom25
     simpath= f"/nobackupp2/mtremmel/Romulus/cosmo25/cosmo25p.768sg1bwK1BHe75.{args.timestep}"
-    with open('/nobackup/jvannest/UDG/Rom25Halos.txt') as f:
+    with open('/myhome2/users/vannest/pfe_backup/nobackupp2/UDG/Rom25Halos.txt') as f:
         halolist = f.readlines()
     halolist = [int(i) for i in halolist]
-    with open('/nobackup/jvannest/UDG/Timesteps.Rom25.txt') as f:
+    with open('/myhome2/users/vannest/PynbodyShapePipeline/Timesteps.Rom25.txt') as f:
         timesteps = f.readlines()
     timesteps = [t.rstrip('\n') for t in timesteps]
     timesteps.reverse()
-    HaloIDs = pickle.load(open(f'/nobackup/jvannest/UDG/HaloIDs.Rom25.pickle','rb'))
-    fname = f'/nobackup/jvannest/UDG/PynbodyShapeHistory.Rom25.{args.filter}.nshells{args.number}.pickle'
+    HaloIDs = pickle.load(open(f'/myhome2/users/vannest/PynbodyShapePipeline/HaloIDs.Rom25.pickle','rb'))
+    fname = f'/myhome2/users/vannest/PynbodyShapeHistory.Rom25.{args.filter}.nshells{args.number}.pickle'
 
 #Optional: delete existing file to start over
 if args.overwrite:

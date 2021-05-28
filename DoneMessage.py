@@ -6,7 +6,7 @@ parser.add_argument("-a","--append",type=str)
 parser.add_argument("-s","--simulation",choices=['RomC','Rom25'],required=True)
 args = parser.parse_args()
 
-filepath = '/nobackup/jvannest/UDG/PynbodyShapePipeline/Done.txt'
+filepath = '/myhome2/users/vannest/PynbodyShapePipeline/Done.txt'
 #filepath = '/Users/jdvannest/Pynbody/UDG/PynbodyShapePipeline/Done.txt'
 
 current = time.asctime().split()
